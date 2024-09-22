@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-project-49"
+name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["RustemYeldessov <eldesov1997@gmail.com>"]
@@ -14,6 +14,15 @@ python = "^3.10"
 prompt = "^0.4.1"
 
 
+[tool.poetry.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "python_project_49.brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-progression = "brain_games.scripts.brain_progression:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
+
+
 [tool.poetry.group.dev.dependencies]
 flake8 = "^7.1.1"
 
@@ -21,10 +30,4 @@ flake8 = "^7.1.1"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.brain_even:main"
-brain-calc = "brain_games.scripts.brain_calc:main"
-brain-gcd = "brain_games.scripts.brain_gcd:main"
-brain-progression = "brain_games.scripts.brain_progression:main"
-brain-prime = "brain_games.scripts.brain_prime:main"
+
