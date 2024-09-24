@@ -28,6 +28,8 @@ def main():
 		else:
 			correct_answer = 'yes' if is_prime(number) else 'no'
 			print(f"'{answer}' is wrong answer ;(. Correct answer is '{correct_answer}'")
+			print(f"Let's try again, {user_name}")
+
 			break
 
 	if correct_answer == 3:

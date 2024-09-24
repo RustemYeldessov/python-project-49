@@ -33,6 +33,8 @@ def main():
             correct_answer += 1
         else:
             print(f'{answer} is wrong answer ;(. Correct answer is {result}')
+            print(f"Let's try again, {user_name}")
+
             break
 
         if correct_answer == 3:
