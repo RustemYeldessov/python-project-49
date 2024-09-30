@@ -8,7 +8,7 @@ def main():
     print('What is the result of the expression? ')
     correct_answer = 0
     result = 0
-    while correct_answer != 3:
+    while correct_answer < 3:
         num1, num2 = randint(1, 9), randint(1, 9)
         random_operation = choice(operations)
         if random_operation == '+':
@@ -39,8 +39,8 @@ def main():
 
         if correct_answer == 3:
             print(f'Congratulations, {user_name}!')
-        else:
-            print(f"Let's try again, {user_name}")
+        # else:
+        #     print(f"Let's try again, {user_name}")
 
 if __name__ == '__main__':
     main()
