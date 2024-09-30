@@ -7,41 +7,42 @@ def main():
     print(f'Hello, {user_name}!')
     print('What number is missing in the progression?')
     correct_answer = 0
-    result = 0
 
     while correct_answer != 3:
         progression = []
 
+        progression_length = randint(5, 10)
         initial = randint(1, 100)
         step = randint(1, 10)
 
-        for i in range(initial, initial + 10 * step, step):
-            progression.append(i)
+        for i in range(progression_length):
+            progression.append(initial + i * step)
 
-        print('Question: ', end='')
-        random_iteration = randint(1, 11)
-        for k in range(10):
-            if k != random_iteration:
-                print(progression[k], end=' ')
-            else:
-                result = progression[k]
+        hidden_index = randint(0, progression_length - 1)
+        hidden_value = progression[hidden_index]
+
+        print('Question:', end=' ')
+        for i in range(progression_length):
+            if i == hidden_index:
                 print('..', end=' ')
+            else:
+                print(progression[i], end=' ')
         print()
-        answer = int(input('Your answer: '))
 
-        if answer == result:
+        answer = input('Your answer: ')
+
+        if answer.isdigit() and int(answer) == hidden_value:
             print('Correct!')
             correct_answer += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer is '{result}'")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{hidden_value}'.")
             print(f"Let's try again, {user_name}!")
-
             break
 
     if correct_answer == 3:
         print(f'Congratulations, {user_name}!')
     else:
-        print(f"Let's try again, {user_name}")
+        print(f"Let's try again, {user_name}!")
 
 
 if __name__ == '__main__':
