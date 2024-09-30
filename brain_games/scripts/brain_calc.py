@@ -12,16 +12,16 @@ def main():
         num1, num2 = randint(1, 9), randint(1, 9)
         random_operation = choice(operations)
         if random_operation == '+':
-            print(f'Question: {num1} + {num2}')
+            print(f'Question: {num1} {random_operation} {num2}')
             result = num1 + num2
         elif random_operation == '-':
-            print(f'Question: {num1} - {num2}')
+            print(f'Question: {num1} {random_operation} {num2}')
             result = num1 - num2
         elif random_operation == '*':
-            print(f'Question: {num1} * {num2}')
+            print(f'Question: {num1} {random_operation} {num2}')
             result = num1 * num2
         elif random_operation == '/' and num1 % num2 == 0:
-            print(f'Question: {num1} / {num2}')
+            print(f'Question: {num1} {random_operation} {num2}')
             result = num1 / num2
         else:
             continue

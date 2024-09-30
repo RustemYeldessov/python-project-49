@@ -35,7 +35,7 @@ def main():
 	if correct_answer == 3:
 		print(f'Congratulations, {user_name}!')
 	else:
-		print(f"Let's try again, {user_name}")
+		print(f"Let's try again, {user_name}!")
 
 if __name__ == '__main__':
 	main()
