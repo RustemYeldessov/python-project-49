@@ -10,7 +10,9 @@ def main():
 
 	while correct_answer != 3:
 
-		num1, num2 = randint(1, 100), randint(1, 100)
+		# num1, num2 = randint(1, 100), randint(1, 100)
+		num1 = 77
+		num2 = 81
 		print(f'Question: {num1} {num2}')
 		for i in range(min(num1, num2), 0, -1):
 			if num1 % i == 0 and num2 % i == 0:
@@ -24,7 +26,7 @@ def main():
 			correct_answer += 1
 		else:
 			print(f'{answer} is wrong answer ;(. Correct answer is {result}')
-			print(f"Let's try again, {user_name}")
+			print(f"Let's try again, {user_name}!")
 
 			break
 
