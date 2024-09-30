@@ -2,11 +2,12 @@ from random import randint
 
 
 def is_prime(number):
-    counter = 0
-    for i in range(1, number + 1):
+    if number < 2:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
-            counter += 1
-    return True if counter == 2 or number == 1 else False
+            return False
+    return True
 
 
 def main():
@@ -14,32 +15,25 @@ def main():
     user_name = input("May I have your name? ")
     print(f"Hello, {user_name}!")
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    correct_answer = 0
-    result = 0
+    correct_answers = 0
 
-    while correct_answer != 3:
-        number = randint(1, 11)
+    while correct_answers != 3:
+        number = randint(1, 100)  # Диапазон больше для разнообразия
         print(f"Question: {number}")
 
-        answer = input("Your answer: ")
-        if (answer == "yes" and is_prime(number)) or (
-            answer == "no" and not is_prime(number)
-        ):
-            print("Correct!")
-            correct_answer += 1
-        else:
-            correct_answer = "yes" if is_prime(number) else "no"
-            print(
-                f"'{answer}' is wrong answer ;(. Correct answer is '{correct_answer}'"
-            )
-            print(f"Let's try again, {user_name}!")
+        answer = input("Your answer: ").strip().lower()
+        correct_answer = "yes" if is_prime(number) else "no"
 
+        if answer == correct_answer:
+            print("Correct!")
+            correct_answers += 1
+        else:
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {user_name}!")
             break
 
-    if correct_answer == 3:
+    if correct_answers == 3:
         print(f"Congratulations, {user_name}!")
-    # else:
-    # 	print(f"Let's try again, {user_name}!")
 
 
 if __name__ == "__main__":
