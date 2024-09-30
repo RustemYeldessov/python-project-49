@@ -10,9 +10,9 @@ def main():
 
 	while correct_answer != 3:
 
-		# num1, num2 = randint(1, 100), randint(1, 100)
-		num1 = 77
-		num2 = 81
+		num1, num2 = randint(1, 100), randint(1, 100)
+		# num1 = 77
+		# num2 = 81
 		print(f'Question: {num1} {num2}')
 		for i in range(min(num1, num2), 0, -1):
 			if num1 % i == 0 and num2 % i == 0:
@@ -32,8 +32,8 @@ def main():
 
 		if correct_answer == 3:
 			print(f'Congratulations, {user_name}!')
-		else:
-			print(f"Let's try again, {user_name}!")
+		# else:
+		# 	print(f"Let's try again, {user_name}!")
 
 if __name__ == '__main__':
 	main()
