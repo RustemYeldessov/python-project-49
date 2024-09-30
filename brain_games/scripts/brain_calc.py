@@ -1,7 +1,7 @@
 from random import randint, choice
 
 def main():
-    operations = ['+', '-', '/', '*']
+    operations = ['+', '-', '*']
     print('Welcome to the Brain Games')
     user_name = input('May I have your name? ')
     print(f'Hello, {user_name}!')
@@ -20,9 +20,9 @@ def main():
         elif random_operation == '*':
             print(f'Question: {num1} {random_operation} {num2}')
             result = num1 * num2
-        elif random_operation == '/' and num1 % num2 == 0:
-            print(f'Question: {num1} {random_operation} {num2}')
-            result = num1 / num2
+        # elif random_operation == '/' and num1 % num2 == 0:
+        #     print(f'Question: {num1} {random_operation} {num2}')
+        #     result = num1 / num2
         else:
             continue
 
