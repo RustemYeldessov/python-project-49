@@ -4,7 +4,7 @@ from random import randint
 def is_prime(number):
     if number < 2:
         return False
-    for i in range(2, int(number ** 0.5) + 1):
+    for i in range(2, int(number**0.5) + 1):
         if number % i == 0:
             return False
     return True
@@ -28,7 +28,8 @@ def main():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"'{answer}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {user_name}!")
             break
 

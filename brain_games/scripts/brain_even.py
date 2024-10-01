@@ -18,7 +18,7 @@ def main():
     while correct_answer < 3:
         number = randint(1, 100)
         print(f"Question: {number}")
-        answer = input(f"Your answer: ").strip().lower()
+        answer = input("Your answer: ").strip().lower()
 
         # if answer not in ['yes', 'no']:
         #     print("Invalid input. Please answer 'yes' or 'no'.")
@@ -30,9 +30,8 @@ def main():
             print("Correct!")
             correct_answer += 1
         else:
-            print(
-                f"'{answer}' is wrong answer ;(. Correct answer was '{expected_answer}'."
-            )
+            print(f"'{answer}' is wrong answer ;(.", end=" ")
+            print(f"Correct answer was '{expected_answer}'.")
             print(f"Let's try again, {user_name}!")
             return
 
