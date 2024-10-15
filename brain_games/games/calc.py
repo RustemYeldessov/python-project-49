@@ -35,5 +35,3 @@ def main():
 
     if correct_answers == 3:
         print(f"Congratulations, {user_name}!")
-
-

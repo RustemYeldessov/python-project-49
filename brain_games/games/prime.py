@@ -18,7 +18,7 @@ def main():
     correct_answers = 0
 
     while correct_answers != 3:
-        number = randint(1, 100)  # Диапазон больше для разнообразия
+        number = randint(1, 100)
         print(f"Question: {number}")
 
         answer = input("Your answer: ").strip().lower()

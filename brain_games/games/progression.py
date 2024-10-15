@@ -48,4 +48,3 @@ def main():
 
     if correct_answer == 3:
         print(f"Congratulations, {user_name}!")
-

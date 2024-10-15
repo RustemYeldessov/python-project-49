@@ -32,4 +32,3 @@ def main():
             return
 
     print(f"Congratulations, {user_name}!")
-
