@@ -5,6 +5,6 @@ After completing all the steps in the project, automatic tests will become avail
 The hexlet-check.yml file is responsible for running these tests - do not delete this file, edit it, or rename the repository.
 
 
-https://asciinema.org/a/R05NuGrvbXABOhYACvcVd3s3f
+https://asciinema.org/a/AJFiwPOIyYJl4eTad8bzh93i1
 
-<script src="https://asciinema.org/a/https://asciinema.org/a/R05NuGrvbXABOhYACvcVd3s3f.js" id="asciicast-R05NuGrvbXABOhYACvcVd3s3f" async></script>
+<script id="asciicast-AJFiwPOIyYJl4eTad8bzh93i1" src="https://asciinema.org/a/AJFiwPOIyYJl4eTad8bzh93i1.js" async></script>
