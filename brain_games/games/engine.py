@@ -11,7 +11,7 @@ def run_game(game):
 
     for _ in range(number_of_rounds):
         question, correct_answer = game.generate_round()
-        print(f"Quetion: {question}")
+        print(f"Question: {question}")
         answer = prompt.string("Your answer: ")
 
         if answer != correct_answer:
