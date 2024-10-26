@@ -1,5 +1,6 @@
 from random import randint
 
+discription = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def is_prime(number):
     if number < 2:
@@ -9,29 +10,8 @@ def is_prime(number):
             return False
     return True
 
+def generate_round():
+    number = randint(1, 100)
+    correct_answer = "yes" if is_prime(number) else "no"
+    return str(number), correct_answer
 
-def main():
-    print("Welcome to the Brain Games")
-    user_name = input("May I have your name? ")
-    print(f"Hello, {user_name}!")
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    correct_answers = 0
-
-    while correct_answers != 3:
-        number = randint(1, 100)
-        print(f"Question: {number}")
-
-        answer = input("Your answer: ").strip().lower()
-        correct_answer = "yes" if is_prime(number) else "no"
-
-        if answer == correct_answer:
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(f"'{answer}' is wrong answer ;(.", end=" ")
-            print(f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {user_name}!")
-            break
-
-    if correct_answers == 3:
-        print(f"Congratulations, {user_name}!")

@@ -1,5 +1,6 @@
 from random import randint
 
+discription = "What number is missing in the progression?"
 
 def generate_progression():
     progression_length = randint(5, 10)
@@ -9,42 +10,16 @@ def generate_progression():
     hidden_index = randint(0, progression_length - 1)
     return progression, hidden_index
 
-
-def show_question(progression, hidden_index):
-    print("Question:", end=" ")
+def generate_round():
+    progression, hidden_index = generate_progression()
+    question = ''
     for i in range(len(progression)):
         if i == hidden_index:
-            print("..", end=" ")
+            question += '.. '
         else:
-            print(progression[i], end=" ")
-    print()
+            question += str(progression[i])
+            question += ' '
+    correct_answer = progression[hidden_index]
 
+    return question, str(correct_answer)
 
-def main():
-    print("Welcome to the Brain Games")
-    user_name = input("May I have your name? ")
-    print(f"Hello, {user_name}!")
-    print("What number is missing in the progression?")
-    correct_answer = 0
-
-    while correct_answer < 3:
-        progression, hidden_index = generate_progression()
-        hidden_value = progression[hidden_index]
-
-        show_question(progression, hidden_index)
-
-        answer = input("Your answer: ")
-
-        if answer.isdigit() and int(answer) == hidden_value:
-            print("Correct!")
-            correct_answer += 1
-        else:
-
-            print(f"'{answer}' is wrong answer ;(.", end=" ")
-            print(f"Correct answer was '{hidden_value}'.")
-            print(f"Let's try again, {user_name}!")
-
-            break
-
-    if correct_answer == 3:
-        print(f"Congratulations, {user_name}!")

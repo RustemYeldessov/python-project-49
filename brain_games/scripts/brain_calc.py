@@ -1,5 +1,10 @@
-from brain_games.games.calc import main
+from brain_games.games.engine import run_game
+from brain_games.games import calc
 
 
-if __name__ == "__main__":
+def main():
+    run_game(calc)
+
+if __name__ == '__main__':
     main()
+
