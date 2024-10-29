@@ -1,6 +1,5 @@
 import prompt
 from brain_games.cli import welcome_user
-from brain_games.scripts.brain_games import brain_games
 
 NUMBER_OF_ROUNDS = 3
 
