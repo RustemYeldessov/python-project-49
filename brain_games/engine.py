@@ -6,7 +6,7 @@ NUMBER_OF_ROUNDS = 3
 
 def run_game(game):
     user_name = welcome_user()
-    print(game.discription)
+    print(game.DISCRIPTION)
 
     for _ in range(NUMBER_OF_ROUNDS):
         question, correct_answer = game.generate_round()
