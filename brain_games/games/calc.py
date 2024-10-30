@@ -1,6 +1,6 @@
 from random import randint, choice
 
-discription = "What is the result of the expression? "
+DISCRIPTION = "What is the result of the expression? "
 
 
 def calculate(num1, num2, operation):
